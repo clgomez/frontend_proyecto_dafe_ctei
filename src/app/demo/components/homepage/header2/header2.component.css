@@ -1,0 +1,7 @@
+.nav-tabs .nav-item {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+  }
+
+  .nav-tabs .nav-link {
+    margin-right: 70px; /* Espacio entre los enlaces si es necesario */
+  }

@@ -1,0 +1,63 @@
+/* Estilos generales del formulario */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+}
+
+/* Colores de los inputs según la calificación */
+.excelente {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.bueno {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.regular {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.malo {
+  background-color: #f5c6cb;
+  border-color: #dc3545;
+}
+
+/* Iconos de las calificaciones */
+.icon {
+  margin-left: 10px;
+}
+
+.icon.excelente:before {
+  content: "✔"; /* Chulo para Excelente */
+  color: green;
+}
+
+.icon.bueno:before {
+  content: "👍"; /* Pulgar arriba para Bueno */
+  color: orange;
+}
+
+.icon.regular:before {
+  content: "⚠"; /* Advertencia para Regular */
+  color: red;
+}
+
+.icon.malo:before {
+  content: "✖"; /* Cruz para Malo */
+  color: darkred;
+}

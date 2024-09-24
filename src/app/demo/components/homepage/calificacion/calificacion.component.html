@@ -1,0 +1,67 @@
+<!--<div class="form-container">
+    <form>
+      <div *ngFor="let field of fields">
+        <label>{{ field.label }}</label>
+        <input
+          type="text"
+          [(ngModel)]="field.value"
+          [ngClass]="getCalificacionClass(field.calificacion)"
+          [name]="field.label">  -->
+
+        <!-- Dropdown para seleccionar calificación -->
+<!--        <select [(ngModel)]="field.calificacion" (ngModelChange)="onCalificacionChange(field)" name="calificacion-{{i}}" >
+          <option value="excelente">Excelente</option>
+          <option value="bueno">Bueno</option>
+          <option value="regular">Regular</option>
+          <option value="malo">Malo</option>
+        </select>
+    -->
+        <!-- Iconos representativos -->
+<!--        <span class="icon" [ngClass]="getCalificacionIcon(field.calificacion)"></span>
+      </div>
+    </form>
+  </div>
+-->
+
+
+<div class="form-container">
+    <form>
+      <div *ngFor="let field of fields; let i = index" class="form-group">
+        <label [for]="'field-' + i" class="form-label">{{ field.label }}</label>
+
+        <div class="form-fields">
+          <!-- Input de texto -->
+          <input
+            id="field-{{i}}"
+            type="text"
+            [(ngModel)]="field.value"
+            [ngClass]="getCalificacionClass(field.calificacion)"
+            name="field-{{i}}"
+            class="form-control"
+            placeholder="Ingrese {{ field.label }}">
+
+          <!-- Dropdown para seleccionar calificación -->
+          <select
+            [(ngModel)]="field.calificacion"
+            (change)="onCalificacionChange(field)"
+            name="calificacion-{{i}}"
+            class="form-select">
+            <option value="" disabled>Seleccione Calificación</option>
+            <option value="excelente">Excelente</option>
+            <option value="bueno">Bueno</option>
+            <option value="regular">Regular</option>
+            <option value="malo">Malo</option>
+          </select>
+
+          <!-- Iconos representativos -->
+          <span class="icon" [ngClass]="getCalificacionIcon(field.calificacion)"></span>
+        </div>
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <div class="submit-button">
+          <p-button type="button" (onClick)="submitForm()"  label="Calificar" severity="success"/>
+      </div>
+    </form>
+  </div>
+

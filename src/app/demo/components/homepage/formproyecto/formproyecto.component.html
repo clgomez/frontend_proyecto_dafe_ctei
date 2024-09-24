@@ -1,0 +1,92 @@
+
+<div class="card bg-dark text-black">
+    <div class="card-header"><p-tag severity="primary" value="{{ titulo }}"></p-tag></div>
+    <div class="card-body">
+      <form>
+        <div class="form-group row">
+          <label for="nombre" class="col-form-label col-sm-2">Titulo</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.titulo" name="titulo">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="descripcion" class="col-form-label col-sm-2">Descripción</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.descripcion" name="descripcion">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="poblacionObjetivo" class="col-form-label col-sm-2">Población Objetivo</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.poblacionObjetivo" name="poblacionObjetivo">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="justificacion" class="col-form-label col-sm-2">Justificación</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.justificacion" name="justificacion">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="presupuesto" class="col-form-label col-sm-2">Presupuesto</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.presupuesto" name="presupuesto">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="resultadosEsperados" class="col-form-label col-sm-2">Resultados Esperados</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.resultadosEsperados" name="resultadosEsperados">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="observaciones" class="col-form-label col-sm-2">Observaciones</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.observaciones" name="observaciones">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="marca" class="col-form-label col-sm-2">Fecha de Creacion</label>
+          <div class="col-sm-6">
+               <p-calendar
+                [(ngModel)]="proyecto.fechaCreacion"
+                [showIcon]="true"
+                [showOnFocus]="false"
+                inputId="buttondisplay"
+                [placeholder]="proyecto.fechaCreacion"
+                [dateFormat]="'dd/mm/yy'"
+                name="fechaCreacion"
+                (ngModelChange)="onDateChangeFechaCreacion($event)"
+                />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="marca" class="col-form-label col-sm-2">Fecha de Actualización</label>
+          <div class="col-sm-6">
+               <p-calendar
+                [(ngModel)]="proyecto.fechaActualizacion"
+                [showIcon]="true"
+                [showOnFocus]="false"
+                inputId="buttondisplay"
+                [placeholder]="proyecto.fechaActualizacion"
+                [dateFormat]="'dd/mm/yy'"
+                name="fechaActualizacion"
+                (ngModelChange)="onDateChangeFechaActualizacion($event)"
+                />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="referencia" class="col-form-label col-sm-2">Estado</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="proyecto.estado" name="estado">
+          </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6">
+              <button class="btn btn-primary" role="button" (click)='mostrarVistaPrevia()'>Vista Previa</button>
+            </div>
+        </div>
+
+      </form>
+    </div>
+  </div>

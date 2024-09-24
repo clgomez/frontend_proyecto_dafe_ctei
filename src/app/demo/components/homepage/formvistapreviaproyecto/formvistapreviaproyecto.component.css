@@ -1,0 +1,61 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input.valid {
+    border-color: green;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
+  
+  .checkmark {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    color: green;
+  }
+  
+  .helper-text {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

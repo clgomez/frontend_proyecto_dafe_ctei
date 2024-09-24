@@ -1,0 +1,26 @@
+<!-- src/app/home/home.component.html -->
+<div class="main-container">
+    <h1 class="title">¡Bienvenidos a la Plataforma de Pequeños Investigadores!</h1>
+
+    <div class="button-grid">
+      <button class="big-button" [routerLink]="['/homepage/formproyecto']">
+        <img src="assets/layout/images/pensamiento-critico.png" alt="Formular Proyecto">
+        Formular Proyecto
+      </button>
+
+      <button class="big-button" [routerLink]="['/homepage/proyectos']">
+        <img src="assets/layout/images/transformacion-digital.png" alt="Consultar Proyectos">
+        Consultar Proyectos
+      </button>
+
+      <button class="big-button" [routerLink]="['/homepage/file-upload']">
+        <img src="assets/layout/images/ciencia.png" alt="Exportar Proyecto">
+        Exportar Proyecto
+      </button>
+
+      <button class="big-button" [routerLink]="['/homepage/calificacion']">
+        <img src="assets/layout/images/programacion.png" alt="Calificar Proyecto">
+        Calificar Proyecto
+      </button>
+    </div>
+  </div>
